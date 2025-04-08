@@ -1,10 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="refresh" content="0;url=https://discord.gg/eTZ4ZwcktQ">
-    <title>Redirigiendo a Discord...</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="8; url=https://discord.gg/eTZ4ZwcktQ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    :root {
+      --aura-color: #26BB74;
+      --aura-faded: rgba(65, 255, 134, 0.2);
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0d0d0f;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    .glass-box {
+      position: relative;
+      width: 500px;
+      padding: 3rem 4rem;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      z-index: 2;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .glass-box h1 {
+      font-size: 2.5rem;
+      color: var(--aura-color);
+      margin-bottom: 1rem;
+    }
+
+    .glass-box p {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    .loader {
+      margin: 2rem auto 0;
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top: 4px solid var(--aura-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .orbit-container {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      animation: rotateCircle 20s linear infinite;
+      z-index: 1;
+    }
+
+    .icon {
+      --glow-color: var(--aura-color);
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--glow-color);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 10px var(--glow-color);
+      animation: pulseGlow 2.5s ease-in-out infinite;
+    }
+
+    .icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .icon::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 18px var(--glow-color), 0 0 30px var(--aura-faded);
+      opacity: 0.4;
+      z-index: -1;
+      animation: auraPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes auraPulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+      }
+      50% {
+        transform: scale(1.25);
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 10px var(--glow-color), 0 0 5px var(--aura-faded);
+      }
+      50% {
+        box-shadow: 0 0 20px var(--glow-color), 0 0 15px var(--aura-faded);
+      }
+    }
+
+    /* Posiciones circulares de los iconos */
+    .icon:nth-child(1)  { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+    .icon:nth-child(2)  { top: 25%; left: 85%; transform: translate(-50%, -50%); }
+    .icon:nth-child(3)  { top: 75%; left: 85%; transform: translate(-50%, -50%); }
+    .icon:nth-child(4)  { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+    .icon:nth-child(5)  { top: 75%; left: 15%; transform: translate(-50%, -50%); }
+    .icon:nth-child(6)  { top: 25%; left: 15%; transform: translate(-50%, -50%); }
+
+    @keyframes rotateCircle {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-    <p>Redirigiendo a nuestro servidor de Discord... Si no se redirige automáticamente, <a href="https://discord.gg/eTZ4ZwcktQ">haz clic aquí</a>.</p>
+
+  <div class="orbit-container">
+    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM11 11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"/></svg></div>
+    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-5a5 5 0 100-10 5 5 0 000 10z"/></svg></div>
+    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M17 2H7a2 2 0 00-2 2v16l7-3 7 3V4a2 2 0 00-2-2z"/></svg></div>
+    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2z"/></svg></div>
+    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div>
+    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12l18-6-6 18-2-8z"/></svg></div>
+  </div>
+
+  <div class="glass-box">
+    <h1>Redirecting to our Discord</h1>
+    <p>Please wait a few seconds...</p>
+    <div class="loader"></div>
+  </div>
+
 </body>
 </html>
